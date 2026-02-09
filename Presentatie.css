@@ -1,0 +1,211 @@
+/* ------------------------------
+   BASIS
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: #0d0d0d; /* Donkere luxe achtergrond */
+    color: #f2f2f2;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+    background: #000;
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 2px solid #f4c542;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f4c542;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #e0e0e0;
+    opacity: 0.85;
+    margin-top: 0.3rem;
+}
+
+/* ------------------------------
+   NAVIGATIE
+------------------------------ */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f4c542;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid #f4c542;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    background: #f4c542;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   KAARTEN / SECTIES
+------------------------------ */
+.card {
+    background: #111;
+    border: 1px solid #1f1f1f;
+    border-left: 4px solid #f4c542;
+    padding: 1.7rem;
+    margin-bottom: 1.7rem;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+    color: #f4c542;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.card h3 {
+    color: #f4c542;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p,
+.card li {
+    color: #e6e6e6;
+}
+
+.card ul,
+.card ol {
+    margin-left: 1.2rem;
+}
+
+/* ------------------------------
+   ACCORDION
+------------------------------ */
+.accordion-header {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+    color: #f4c542;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-header::after {
+    content: "+";
+    font-size: 1.2rem;
+}
+
+.accordion-header.active::after {
+    content: "–";
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.25s ease;
+    padding: 0 1rem;
+}
+
+.accordion-body ul {
+    margin: 0.7rem 0 1rem 1.2rem;
+}
+
+/* ------------------------------
+   FORMULIER
+------------------------------ */
+label {
+    color: #f4c542;
+    font-weight: 600;
+}
+
+textarea {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.7rem;
+}
+
+button[type="submit"] {
+    background: #f4c542;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: #ffdb5c;
+    transform: translateY(-2px);
+}
+
+.status-message {
+    color: #8cff8c;
+    font-size: 0.85rem;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+    background: #000;
+    color: #f4c542;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 2px solid #f4c542;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
